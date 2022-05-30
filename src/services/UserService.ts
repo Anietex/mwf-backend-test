@@ -3,6 +3,7 @@ import {DocumentClient} from "aws-sdk/clients/dynamodb";
 import User from "../models/User";
 
 
+
 export default class UserService {
 
     private tableName: string = "UsersTable";

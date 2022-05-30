@@ -1,10 +1,10 @@
 import {APIGatewayProxyEvent, APIGatewayProxyResult} from "aws-lambda";
-import {formatJSONResponse} from '@libs/api-gateway';
-import {middyfy} from '@libs/lambda';
+import {formatJSONResponse} from '../../libs/api-gateway';
+import {middyfy} from '../../libs/lambda';
 import {userService} from '../../services';
 
 import {v4 as Uuid4} from 'uuid';
-import PasswordHash from "@libs/password-hash";
+import PasswordHash from "../../libs/password-hash";
 
 export const getUser = middyfy(async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const userEmail = event.queryStringParameters.email
